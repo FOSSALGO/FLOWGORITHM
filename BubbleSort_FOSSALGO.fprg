@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="SUGIARTO COKROWIBOWO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-02-05 05:03:32 AM"/>
+        <attribute name="created" value="RkFLVUxUQVNfVEVLTklLX1ZEMTtERVNLVE9QLTUyTEszQzQ7MjAyMC0wMi0wNTswMzozNToxOCBBTTszNzE3"/>
+        <attribute name="edited" value="RkFLVUxUQVNfVEVLTklLX1ZEMTtERVNLVE9QLTUyTEszQzQ7MjAyMC0wMi0wNTswNTowMzozMiBBTTsxOzM4MTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, j" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="arr" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="arr[i]"/>
+            </for>
+            <comment text="memulai pengurutan data menggunakan algoritma bubble sort"/>
+            <for variable="i" start="0" end="n-2" direction="inc" step="1">
+                <for variable="j" start="0" end="n-i-2" direction="inc" step="1">
+                    <if expression="arr[j] &gt; arr[j+1]">
+                        <then>
+                            <declare name="temp" type="Integer" array="False" size=""/>
+                            <assign variable="temp" expression="arr[j]"/>
+                            <assign variable="arr[j]" expression="arr[j+1]"/>
+                            <assign variable="arr[j+1]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <comment text="cetak elemen-elemen array"/>
+            <output expression="&quot; | &quot;" newline="False"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="arr[i]&amp;&quot; | &quot;" newline="False"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
