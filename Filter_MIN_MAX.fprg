@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="FAKULTAS_TEKNIK_VD1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-02-05 06:22:18 PM"/>
+        <attribute name="created" value="RkFLVUxUQVNfVEVLTklLX1ZEMTtERVNLVE9QLTUyTEszQzQ7MjAyMC0wMi0wNTswNToyNjo1NSBQTTszNzM1"/>
+        <attribute name="edited" value="RkFLVUxUQVNfVEVLTklLX1ZEMTtERVNLVE9QLTUyTEszQzQ7MjAyMC0wMi0wNTswNjoyMjoxOCBQTTsxOzM4Mzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A, B" type="Real" array="False" size=""/>
+            <input variable="A"/>
+            <input variable="B"/>
+            <if expression="A &gt; B">
+                <then>
+                    <output expression="&quot;MAX = &quot;&amp;A" newline="True"/>
+                    <output expression="&quot;MIN = &quot;&amp;B" newline="True"/>
+                </then>
+                <else>
+                    <if expression="A &lt; B">
+                        <then>
+                            <output expression="&quot;MAX = &quot;&amp;B" newline="True"/>
+                            <output expression="&quot;MIN = &quot;&amp;A" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;MAX = MIN = &quot;&amp;A" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
